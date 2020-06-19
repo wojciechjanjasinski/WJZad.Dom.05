@@ -1,11 +1,7 @@
 package Barman;
 
 public class Barman {
-    boolean compare(Person person){
-return  person.getAge() >= 18;
-    }
-
-    void order (Person person, Drink drink){
-
+    boolean order(Person person) {
+        return (person.getAge() >= 18 || person.getDrink().isAlko() && !person.getDrink().isAlko()) || person.getAge() < 18 && !person.getDrink().isAlko();
     }
 }

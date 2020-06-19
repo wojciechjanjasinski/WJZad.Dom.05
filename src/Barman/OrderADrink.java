@@ -1,6 +1,6 @@
 package Barman;
 
-public class OrderingADrink {
+public class OrderADrink {
     public static void main(String[] args) {
         Barman barman = new Barman();
 
@@ -15,15 +15,10 @@ public class OrderingADrink {
     }
 
     private static void order(Barman barman, Person personOne) {
-        if (!personOne.getDrink().isAlko()) {
-            barman.order(personOne, personOne.getDrink());
+        if (barman.order(personOne)) {
             System.out.println(personOne.getFirstName() + " Twój drink " + personOne.getDrink().getName() + " jest gotowy do odbioru. Kwota do zapłaty to " + personOne.getDrink().getPrice() + " PLN ");
-        } else if (barman.compare(personOne)) {
-            barman.order(personOne, personOne.getDrink());
-            System.out.println(personOne.getFirstName() + " Twój drink " + personOne.getDrink().getName() + " jest gotowy do odbioru. Kwota do zapłaty to " + personOne.getDrink().getPrice() + " PLN ");
-
         } else {
-            System.out.println("Niestety nie ukończyłeś wymaganego przepisami wieku, aby móc zamówić ten drink");
+            System.out.println("Niestety nie ukończyłeś wymaganego przepisami wieku, aby móc zamówić ten drink.");
         }
     }
 }

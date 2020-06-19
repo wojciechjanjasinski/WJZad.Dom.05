@@ -26,9 +26,7 @@ public class Drink {
         return alko;
     }
 
-    public void setAlko(boolean alko) {
-        this.alko = alko;
-    }
+    public void setAlko(boolean alko) { this.alko = alko; }
 
     public double getPrice() {
         return price;
