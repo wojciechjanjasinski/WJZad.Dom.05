@@ -3,7 +3,7 @@ package RectangularTriangle;
 public class IsRightTriangle {
     public static void main(String[] args) {
         TriangleCheck triangleCheck = new TriangleCheck();
-        Triangle triangle = new Triangle(8, 8, 8, 'x', 'y', 'z', 90, 30, 60);
+        Triangle triangle = new Triangle(90, 30, 60);
         if (triangle.getAngleG() + triangle.getAngleH() + triangle.getAngleI() != 180) {
             System.out.println("Suma wszystkich kątów trójkąta wynosi 180°. Wprowadź proszę poprawne wartości.");
         } else if (triangleCheck.checkG(triangle)) {
